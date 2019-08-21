@@ -6,7 +6,7 @@ node {
   // // Get some code from a GitHub repository
   git url: 'git@github.com:f3yzee/jenkins-pipeline-test.git'
   // Get the Terraform tool.
-  def tfHome = tool name: 'Terraform', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
+  def tfHome = tool name: 'Terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
   env.PATH = "${tfHome}:${env.PATH}"
   wrap([$class: 'AnsiColorBuildWrapper', colorMapName: 'xterm']) {
     // Mark the code build 'plan'....
