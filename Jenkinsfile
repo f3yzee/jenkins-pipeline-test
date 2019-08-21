@@ -4,7 +4,7 @@ node {
    // Mark the code checkout 'Checkout'....
   stage 'Checkout'
   // // Get some code from a GitHub repository
-  git url: 'https://github.com/f3yzee/jenkins-test.git'
+  git url: 'https://github.com/f3yzee/jenkins-pipeline-test.git'
   // Get the Terraform tool.
   def tfHome = tool name: 'Terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
   env.PATH = "${tfHome}:${env.PATH}"
